@@ -1,0 +1,134 @@
+/* Start Colors */
+:root {
+  --white-c: rgb(236, 8, 8);
+  --Azure-c: rgb(28, 173, 173);
+  --smokeWhite-c: rgb(241, 241, 241);
+  --gray-c: rgb(203, 203, 203);
+  --black-c: rgb(0, 0, 0);
+  --dark-c: rgb(5, 0, 0);
+  --red-c: rgb(255, 36, 36);
+  --primary-c: rgb(40, 223, 153);
+  /* Slider Width */
+  --sliderWidth: 100px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Jost", Arial, Helvetica, sans-serif;
+  background-color: var(--Azure-c);
+}
+
+.slider_Menu_container {
+  width: var(--sliderWidth);
+  height: 100vh;
+  position: fixed;
+  background-color: var(--dark-c);
+  padding: 20px 25px;
+  z-index: 1000;
+  transition: 0.3s ease-in-out;
+}
+
+.slider_links {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.slider_links .slider_link {
+  position: relative;
+  display: flex;
+  white-space: nowrap;
+  cursor: pointer;
+  height: 35px;
+  line-height: 15px;
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 25px;
+  color: var(--gray-c);
+  border-left: 2px solid var(--gray-c);
+  transition: 0.4s;
+  font-weight: 300;
+  overflow: hidden;
+}
+.slider_link i {
+  font-size: 20px;
+  margin-top: -3px;
+}
+.slider_link span {
+  margin-left: 10px;
+  letter-spacing: 1px;
+  position: relative;
+  right: -20px;
+}
+.slider_link:hover {
+  color: var(--white-c);
+  border-color: var(--white-c);
+  border-width: 5px;
+  transition: 0.2s;
+}
+.slider_link.active {
+  color: var(--black-c);
+  border-color: var(--primary-c);
+  border-width: 10px;
+  background-color: red;
+  font-weight: 600;
+}
+/* LogOut */
+.slider_link.logOut {
+  position: relative;
+  top: 10%;
+  color: var(--red-c);
+  border-color: var(--red-c);
+}
+
+/* Toggle Button */
+.toggleButton {
+  width: 21px;
+  height: 150px;
+  border: none;
+  outline: none;
+  background-color: rgb(11, 184, 40);
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 0 10px 10px 0px;
+  border: 1px solid;
+  border-color: rgb(103, 10, 224);
+  cursor: pointer;
+}
+.toggleButton i {
+  transition: 0.3s ease-in-out;
+}
+.toggleButton:hover i {
+  opacity: 0.5;
+}
+.toggleButton.anim i {
+  transform: rotate(180deg);
+  color: var(--primary-c);
+}
+
+.contentPage {
+  position: relative;
+  width: calc(100% - var(--sliderWidth));
+  height: 100vh;
+  float: right;
+  background-color: var(--Azure-c);
+  padding: 10px 20px;
+  transition: 0.3s ease-in-out;
+}
+
+.contentPage header {
+  padding: 10px 15px;
+  background-color: var(--white-c);
+  position: relative;
+  text-align: center;
+  font-size: 22px;
+}
+
+.contentPage h1 {
+  padding: 10px;
+}
